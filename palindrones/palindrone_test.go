@@ -1,4 +1,4 @@
-package palindrones
+package palindromes
 
 import (
 	"testing"
@@ -32,28 +32,28 @@ func TestGetLengthOfNthPalindromeFromLast(t *testing.T) {
 	}
 }
 
-func TestIsPalindrone(t *testing.T) {
+func TestIspalindrome(t *testing.T) {
 	// Test case
 	var want bool
 	var got bool
 
 	// Test case 1
 	want = true
-	got = IsPalindrone("madam")
+	got = Ispalindrome("madam")
 	if got != want {
 		t.Errorf("Test case 1 failed")
 	}
 
 	// Test case 2
 	want = false
-	got = IsPalindrone("madame")
+	got = Ispalindrome("madame")
 	if got != want {
 		t.Errorf("Test case 2 failed")
 	}
 
 	// Test case 3
 	want = true
-	got = IsPalindrone("malayalam")
+	got = Ispalindrome("malayalam")
 	if got != want {
 		t.Errorf("Test case 3 failed")
 	}
@@ -65,7 +65,7 @@ func TestFindPalindromesInString(t *testing.T) {
 	var got []string
 	str := "memory ordering in programs is often a complex area to deal with. malayalam and madam are palindromes. refer c++ books"
 
-	// Apparently palindrones also include single characters...
+	// Apparently palindromes also include single characters...
 	want = []string{"refer", "madam", "malayalam", "a"}
 
 	got = FindPalindromesInString(str)

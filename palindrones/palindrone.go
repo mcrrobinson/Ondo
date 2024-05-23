@@ -1,11 +1,11 @@
-package palindrones
+package palindromes
 
 import (
 	"strings"
 )
 
-func IsPalindrone(word string) bool {
-	// defer timer.TimeIt("IsPalindrone")()
+func Ispalindrome(word string) bool {
+	// defer timer.TimeIt("Ispalindrome")()
 	n := len(word)
 	for i := 0; i < n/2; i++ {
 		if word[i] != word[n-1-i] {
@@ -25,7 +25,7 @@ func FindPalindromesInString(s string) []string {
 	// Iterate over the words backwards, adding the palindromes to the slice
 	// at the index count. Then increment count.
 	for i := len(words) - 1; i >= 0; i-- {
-		if IsPalindrone(words[i]) {
+		if Ispalindrome(words[i]) {
 			palindromes[count] = words[i]
 			count++
 		}
@@ -49,7 +49,7 @@ func GetLengthOfNthPalindromeFromLast(s string, n int) int {
 }
 
 // Method 1:
-// 1. Gets all palindrones from the string, 0 to n.
+// 1. Gets all palindromes from the string, 0 to n.
 // 2. Reverses the list of palindromes.
 // 3. Returns the length of the nth palindrome from the end of the list.
 
